@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Quiz Screen -->
+      <div class="quiz-screen" id="quizScreen">
+        <div class="quiz-header">
+          <h1 class="app-title">🧠 Quiz App</h1>
+          <div class="progress-info">
+            <span id="questionCounter">Soal 1 dari 10</span>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <p class="question-text" id="questionText"></p>
+        </div>
+
+        <div class="options-grid" id="optionsGrid"></div>
+
+        <button class="btn-next" id="btnNext" disabled>Next →</button>
+      </div>
+
+      <!-- Result Screen -->
+      <div class="result-screen hidden" id="resultScreen">
+        <div class="result-card">
+          <div class="result-emoji" id="resultEmoji">🎉</div>
+          <h2 class="result-title">Quiz Selesai!</h2>
+          <div class="result-score" id="resultScore">8 / 10</div>
+          <p class="result-percent" id="resultPercent">80%</p>
+          <p class="result-message" id="resultMessage">Bagus sekali!</p>
+          <p class="high-score" id="highScore"></p>
+          <button class="btn-restart" id="btnRestart">🔄 Main Lagi</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
