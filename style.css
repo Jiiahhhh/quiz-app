@@ -229,6 +229,14 @@ body {
   font-weight: 600;
 }
 
+.category-screen {
+  text-align: center;
+}
+
+.category-screen h2 {
+  margin-bottom: 20px;
+}
+
 /* ============================================
    UTILITY
    ============================================ */
