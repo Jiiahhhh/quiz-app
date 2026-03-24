@@ -1,0 +1,240 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.app {
+  width: 100%;
+  max-width: 560px;
+}
+
+/* ============================================
+   QUIZ SCREEN
+   ============================================ */
+.quiz-header {
+  margin-bottom: 24px;
+}
+
+.app-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 16px;
+}
+
+.progress-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#questionCounter {
+  font-size: 0.85rem;
+  color: #718096;
+  white-space: nowrap;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #667eea;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  width: 0%;
+}
+
+/* ============================================
+   QUESTION CARD
+   ============================================ */
+.question-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.question-text {
+  font-size: 1.05rem;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+/* ============================================
+   OPTIONS
+   ============================================ */
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.option-btn {
+  padding: 14px 16px;
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #2d3748;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.option-btn:hover:not(:disabled) {
+  border-color: #667eea;
+  background: #ebf4ff;
+}
+
+.option-btn.correct {
+  background: #f0fff4;
+  border-color: #48bb78;
+  color: #276749;
+  font-weight: 600;
+}
+
+.option-btn.wrong {
+  background: #fff5f5;
+  border-color: #fc8181;
+  color: #c53030;
+}
+
+.option-btn:disabled {
+  cursor: default;
+}
+
+/* ============================================
+   NEXT BUTTON
+   ============================================ */
+.btn-next {
+  width: 100%;
+  padding: 14px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-next:hover:not(:disabled) {
+  background: #5a67d8;
+}
+
+.btn-next:disabled {
+  background: #a0aec0;
+  cursor: default;
+}
+
+/* ============================================
+   RESULT SCREEN
+   ============================================ */
+.result-screen {
+  display: flex;
+  justify-content: center;
+}
+
+.result-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 32px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.result-emoji {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.result-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.result-score {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #667eea;
+  margin-bottom: 4px;
+}
+
+.result-percent {
+  font-size: 1.2rem;
+  color: #718096;
+  margin-bottom: 12px;
+}
+
+.result-message {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+
+.high-score {
+  font-size: 0.85rem;
+  color: #a0aec0;
+  margin-bottom: 24px;
+}
+
+.btn-restart {
+  padding: 14px 32px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-restart:hover {
+  background: #5a67d8;
+}
+
+/* ============================================
+   UTILITY
+   ============================================ */
+.hidden {
+  display: none !important;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 480px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+}
