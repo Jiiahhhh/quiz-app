@@ -5,7 +5,6 @@ const optionsGrid = document.getElementById("optionsGrid");
 const btnNext = document.getElementById("btnNext");
 const quizScreen = document.getElementById("quizScreen");
 const resultScreen = document.getElementById("resultScreen");
-const resultTitle = document.getElementById("resultTitle");
 const resultScore = document.getElementById("resultScore");
 const resultPercent = document.getElementById("resultPercent");
 const resultEmoji = document.getElementById("resultEmoji");
